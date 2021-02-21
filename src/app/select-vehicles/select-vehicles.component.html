@@ -1,0 +1,30 @@
+<section class="select-vehicles-container">
+    <section class="description">
+        <h2>Drag the available vehicles to the chosen planets to search</h2>
+        <section class="available-vehicles">
+            <h3>Vehicles</h3>
+            <section class="vehicle-list">
+                <app-vehicle-drag-container *ngFor="let vehicleDraggable of vehicleDraggables$ | async"
+                    [vehicles]="vehicleDraggable.dropListData" cdkDropList
+                    [cdkDropListData]="vehicleDraggable.dropListData" [cdkDropListConnectedTo]="planetDropableIDs"
+                    cdkDropListSortingDisabled>
+                </app-vehicle-drag-container>
+            </section>
+        </section>
+        <section class="available-planets">
+            <h3>Planets</h3>
+            <section class="planet-list">
+                <app-planet-droppable *ngFor="let planetDropable of planetDropables"
+                    (selectionComplete)="onPlanetVehicleSelectionComplete($event)" [planetDroppable]="planetDropable">
+                </app-planet-droppable>
+            </section>
+        </section>
+    </section>
+    <section class="status description">
+        <h3>Total time taken: {{ totalTimeTaken }} hours</h3>
+    </section>
+    <section class="call-to-action">
+        <button type="button" class="secondary" (click)="onResetClicked()">Reset</button>
+        <button type="button" (click)="onStartSearchClicked()" [disabled]="startSearchDisabled">Start Search</button>
+    </section>
+</section>

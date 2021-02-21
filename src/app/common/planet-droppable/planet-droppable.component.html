@@ -1,0 +1,8 @@
+<section class="planet-droppable-container">
+    <h4>{{ planetDroppable?.planet?.name }}</h4>
+    <p class="info">{{ planetDroppable?.planet?.distance }} megamiles</p>
+    <img [src]="planetImage" alt="">
+    <section class="drop-zone" [class.non-empty]="dropListData && dropListData.length > 0" cdkDropList (cdkDropListDropped)="drop($event)" [cdkDropListData]="dropListData" [id]="planetDroppable!.id">
+        <app-vehicle-draggable *ngIf="dropListData && dropListData.length > 0" [name]="dropListData[0].name"></app-vehicle-draggable>
+    </section>
+</section>

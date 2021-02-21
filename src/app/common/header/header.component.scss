@@ -1,0 +1,29 @@
+@import '../vars';
+
+.header-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: $header-padding;
+    
+    .head {
+        display: flex;
+        align-items: center;
+
+        h1 {
+            font-size: $header-responsive-size;
+        }
+        img {
+            width: $header-responsive-image-size;
+            height: $header-responsive-image-size;
+            margin: 0 2em;
+        }
+    }
+
+    .menu {
+        a {
+            font-size: $mission-responsive-size;
+        }
+    }
+}

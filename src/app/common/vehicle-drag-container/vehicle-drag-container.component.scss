@@ -1,0 +1,30 @@
+.vehicle-drag-container {
+    padding: 0.5em;
+    background: rgba(0,0,0, .04);
+    margin: .05em;
+
+    h4 {
+        margin-top: .1em;
+
+        span.info-icon {
+            width: 1em;
+            height: 1em;
+            margin-left: .5em;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .info {
+        font-size: .9em;
+    }
+
+    .vehicle-draggable-list {
+        display: flex;
+        justify-content: space-around;
+        min-height: 2.5em;
+    }
+}

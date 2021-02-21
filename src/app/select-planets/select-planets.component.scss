@@ -1,0 +1,13 @@
+@import '../common/vars';
+
+.select-planets-container {
+    display: flex;
+    flex-direction: column;
+    padding: $container-padding;
+
+    .planets-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

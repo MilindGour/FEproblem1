@@ -1,0 +1,20 @@
+@import '../common/vars';
+
+.home-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: $container-padding;
+    
+    .head {
+        display: flex;
+        align-items: center;
+            
+        img {
+            width: $head-responsive-image-size;
+            height: $head-responsive-image-size;
+            margin: 0 2em;
+        }
+    }
+}

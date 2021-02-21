@@ -1,0 +1,14 @@
+@import '../common/vars';
+
+.select-vehicles-container {
+    display: flex;
+    flex-direction: column;
+    padding: $container-padding;
+
+    .vehicle-list, .planet-list {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    
+}

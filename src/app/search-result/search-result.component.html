@@ -1,0 +1,17 @@
+<section class="search-result-container">
+    <section class="description" *ngIf="searchResult">
+        <section class="success" *ngIf="searchResult.found">
+            <h2>Congratulations!!!</h2>
+            <p>Success! Congratulations on finding Falcone. King Shan is mighty pleased.</p>
+            <h3>Time taken: {{ searchResult.timeTaken }} hours</h3>
+            <h3>Planet found: {{ searchResult.planetName }}</h3>
+        </section>
+        <section class="failure" *ngIf="!searchResult.found">
+            <h2>Oh No!!!</h2>
+            <p>You've failed to find the Falcone. King Shan's fate is now doomed.</p>
+        </section>
+    </section>
+    <section class="call-to-action">
+        <button type="button" (click)="onStartOverClicked()">Start Over</button>
+    </section>
+</section>

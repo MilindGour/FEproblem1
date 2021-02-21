@@ -1,0 +1,11 @@
+<section class="vehicle-drag-container">
+    <h4>{{ name }}</h4>
+    <p class="info">
+        Speed: {{ speed }} <br>
+        Max Distance: {{ max_distance }}
+    </p>
+    <section class="vehicle-draggable-list">
+        <app-vehicle-draggable *ngFor="let vehicle of vehicles" [name]="vehicle?.name" cdkDrag>
+        </app-vehicle-draggable>
+    </section>
+</section>

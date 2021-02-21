@@ -1,0 +1,15 @@
+<section class="select-planets-container">
+    <section class="description">
+        <h2>Select the {{ALLOWED_PLANETS_COUNT}} planets you want to search in</h2>
+        <p>
+            King Shan has received intelligence that Al Falcone is in hiding in one of these 6 planets. However he has limited resources at his disposal & can send his army to only {{ALLOWED_PLANETS_COUNT}} of these
+            planets.
+        </p>
+    </section>
+    <section class="planets-list description">
+        <app-planet *ngFor="let p of allPlanets$ | async" [planet]="p" (toggleChange)="onPlanetToggleChanged(p, $event)" [isDisabled]="selectedPlanets.length === ALLOWED_PLANETS_COUNT"></app-planet>
+    </section>
+    <section class="call-to-action">
+        <button type="button" (click)="onChoosePlanetsClicked()" [disabled]="selectedPlanets.length !== ALLOWED_PLANETS_COUNT">Choose vehicles</button>
+    </section>
+</section>

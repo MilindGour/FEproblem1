@@ -1,0 +1,43 @@
+@import '../../common/vars';
+
+.planet-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    max-width: 5em;
+    min-height: 7em;
+    padding: $planet-container-padding;
+    box-shadow: $global-shadow;
+    border: 1px solid rgba(0,0,0, .3);
+    cursor: pointer;
+
+    img {
+        width: 4em;
+        height: 4em;
+        object-fit: scale-down;
+        margin: auto;
+    }
+    .planet-distance {
+        font-size: $planet-distance-size;
+    }
+
+    .check_mark {
+        position: absolute;
+        top: .5em;
+        right: .5em;
+        width: 1em;
+        height: 1em;
+        object-fit: contain;
+        opacity: 0;
+    }
+
+    &.selected {
+        box-shadow: none;
+        transform: translate(10px, 10px);
+        background: rgba(0, 255, 0, .1);
+
+        .check_mark {
+            opacity: 1;
+        }
+    }
+}

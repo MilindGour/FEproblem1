@@ -1,0 +1,8 @@
+<figure class="planet-container" [class.selected]="isSelected" (click)="onClick()">
+    <img [src]="planetImage" alt="{{ planet.name + ' image' }}">
+    <img src="assets/images/green_check.svg" alt="green check" class="check_mark">
+    <figcaption>
+        <section class="planet-name">{{ planet.name }}</section>
+        <section class="planet-distance">{{ planet.distance }} megamiles</section>
+    </figcaption>
+</figure>

@@ -1,0 +1,8 @@
+<section class="app-wrapper">
+    <app-header *ngIf="headerFooterVisible$ | async"></app-header>
+    <section class="routing-region">
+        <router-outlet></router-outlet>
+    </section>
+    <app-footer *ngIf="headerFooterVisible$ | async"></app-footer>
+</section>
+<app-loader></app-loader>

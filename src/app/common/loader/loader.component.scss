@@ -1,0 +1,36 @@
+.loader-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, .5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        position: relative;
+        padding: .5em;
+        
+        &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: red;
+            z-index: -1;
+            opacity: .5;
+            animation: load-animation .5s ease-out infinite;
+        }
+    }
+}
+
+@keyframes load-animation {
+    0% { left: 0; right: 100%; }
+    50% { left: 0; right: 0; }
+    100% { left: 100%; }
+}

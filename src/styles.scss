@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import './app/common/vars';
+
+$font-family: 'Bangers', cursive;
+
+* {
+    transition: all .1s ease-out;
+}
+// Common styles used in the app
+html, body { 
+    font-family: $font-family;
+    letter-spacing: .2em;
+    margin: 0; 
+}
+body {
+    height: 100vh;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1 {
+    font-size: $head-responsive-size
+}
+.description {
+    font-size: $mission-responsive-size;
+    color: #111111;
+}
+button {
+    font-family: $font-family;
+    font-size: min(2em, 7vw);
+    padding: .4em 1em;
+    color: rgb(109, 82, 24);
+    background: rgb(246, 181, 45);
+    border: none;
+    box-shadow: $global-shadow;
+    margin: .4em;
+
+    &:active:not(:disabled) {
+        box-shadow: none;
+        background: rgb(109, 82, 24);
+        color: rgb(246, 181, 45);
+        transform: translate(10px, 10px);
+    }
+
+    // & + button {
+    //     margin-left: 1em;
+    // }
+
+    &.secondary {
+        background: white;
+        border: 1px solid rgba(0,0,0, .3);
+    }
+    &:disabled {
+        background: #999;
+        color: #555;
+    }
+}
+figure figcaption {
+    text-align: center;
+    padding-top: .5em;
+}
+.call-to-action {
+    text-align: center;
+}
